@@ -1,0 +1,11 @@
+name: Publish Gem
+on:
+  push:
+    branches: master
+
+jobs:
+  ruby-gem-publish:
+    name: Publish Gem
+    uses: Fatsoma/reusable-actions/.github/workflows/ruby-gem-publish.yml@v1
+    with:
+      gem-name: rollout
