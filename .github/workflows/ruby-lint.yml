@@ -1,0 +1,8 @@
+name: Lint
+
+on: [pull_request]
+
+jobs:
+  lint:
+    name: Lint
+    uses: Fatsoma/reusable-actions/.github/workflows/ruby-lint.yml@v1
