@@ -1,0 +1,8 @@
+name: Vulnerabilities
+
+on: [pull_request]
+
+jobs:
+  vulnerabilities:
+    name: Vulnerabilities
+    uses: Fatsoma/reusable-actions/.github/workflows/ruby-vulnerabilities.yml@v1
