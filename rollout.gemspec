@@ -6,19 +6,23 @@ require 'rollout/version'
 Gem::Specification.new do |spec|
   spec.name        = 'rollout'
   spec.version     = Rollout::VERSION
-  spec.authors     = ['James Golick']
-  spec.email       = ['jamesgolick@gmail.com']
+  spec.authors     = ['James Golick', 'Fatsoma']
+  spec.email       = ['jamesgolick@gmail.com', 'dev@fatsoma.com']
   spec.description = 'Feature flippers with redis.'
   spec.summary     = 'Feature flippers with redis.'
-  spec.homepage    = 'https://github.com/FetLife/rollout'
+  spec.homepage    = 'https://github.com/Fatsoma/rollout'
   spec.license     = 'MIT'
+  spec.metadata    = {
+    'github_repo' => 'ssh://github.com/Fatsoma/rollout'
+
+  }
 
   spec.files         = `git ls-files`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.3'
+  spec.required_ruby_version = '>= 2.7.5'
 
   spec.add_dependency 'redis', '>= 4.0'
 
